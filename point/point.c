@@ -7,8 +7,10 @@
 
 int main()
 {
+
+#if 0
     int i = 1;
-     int *p;
+    int *p;
     p = &i;
 
     printf("%lu\n", sizeof(i)); // 4
@@ -20,6 +22,23 @@ int main()
     printf("p = %p\n", p); // p == &i
     printf("&p = %p\n", &p);
     printf("*p = %d\n", *p); // i == *p
+#endif
+
+
+#if 0
+    int *p;
+    //*p = 1; // 不可以这样做， 在macos 报bus error
+
+    printf("%d\n", *p);
+    //printf("%p ---> %d\n", p ,*p);
+
+#endif
+
+    int *p = NULL;
+    void *q = NULL;
+
+
+
 
     exit(0);
 }
